@@ -1,7 +1,7 @@
 {
-  "name": "@fedeeman-datetimepicker/core",
+  "name": "@mat-datetimepicker/core",
   "version": "1.0.0",
-  "repository": "https://github.com/fedeeman/fedeeman-datetimepicker.git",
+  "repository": "https://github.com/fedeeman/mat-datetimepicker.git",
   "author": "<j.fedor38@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
