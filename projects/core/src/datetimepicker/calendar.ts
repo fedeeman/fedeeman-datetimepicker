@@ -126,7 +126,7 @@ export class MatDatetimepickerCalendar<D> implements AfterContentInit, OnDestroy
       (!this.dateFilter || this.dateFilter(date, MatDatetimepickerFilterType.DATE)) &&
       (!this.minDate || this._adapter.compareDate(date, this.minDate) >= 0) &&
       (!this.maxDate || this._adapter.compareDate(date, this.maxDate) <= 0);
-  }
+  };
 
   /**
    * The current active date. This determines which time period is shown and which date is
@@ -170,12 +170,11 @@ export class MatDatetimepickerCalendar<D> implements AfterContentInit, OnDestroy
   }
 
   get _dateLabel(): string {
-    switch (this.type) {
-      case "month":
-        return this._adapter.getMonthNames("long")[this._adapter.getMonth(this._activeDate)];
-      default:
-        return this._adapter.format(this._activeDate, this._dateFormats.display.popupHeaderDateLabel);
+    if (this.type === "month") {
+      return this._adapter.getMonthNames("long")[this._adapter.getMonth(this._activeDate)];
     }
+    return this._adapter.format(this._activeDate, this._dateFormats.display.popupHeaderDateLabel);
+
   }
 
   get _hoursLabel(): string {
@@ -223,38 +222,37 @@ export class MatDatetimepickerCalendar<D> implements AfterContentInit, OnDestroy
 
   /** Handles date selection in the month view. */
   _dateSelected(date: D): void {
-    if (this.type == "date") {
-      if (!this._adapter.sameDate(date, this.selected)) {
-        this.selectedChange.emit(date);
-      }
-    } else {
-      this._activeDate = date;
+    this._activeDate = date;
+    if (this.type !== "date") {
       this._currentView = "clock";
     }
   }
 
   /** Handles month selection in the year view. */
   _monthSelected(month: D): void {
-    if (this.type == "month") {
-      if (!this._adapter.sameMonthAndYear(month, this.selected)) {
-        this.selectedChange.emit(this._adapter.getFirstDateOfMonth(month));
-      }
-    } else {
-      this._activeDate = month;
+    this._activeDate = month;
+    if (this.type !== 'month') {
       this._currentView = "month";
       this._clockView = "hour";
     }
   }
 
   _timeSelected(date: D): void {
-    if (this._clockView !== "minute") {
-      this._activeDate = date;
-      this._clockView = "minute";
-    } else {
-      if (!this._adapter.sameDatetime(date, this.selected)) {
-        this.selectedChange.emit(date);
-      }
-    }
+    this._activeDate = date;
+    this._clockView = "minute";
+  }
+
+  @Input() confirmButtonLabel: string;
+  _handleConfirmButton(event): void {
+    this.selectedChange.emit(this._activeDate);
+    this._userSelected();
+  }
+
+  @Input() cancelButtonLabel: string;
+  _handleCancelButton(event): void {
+    // Close dialog (datetimepicker.close())
+    this._userSelection.emit();
+
   }
 
   _onActiveDateChange(date: D) {
@@ -266,7 +264,7 @@ export class MatDatetimepickerCalendar<D> implements AfterContentInit, OnDestroy
   }
 
   _dateClicked(): void {
-    if (this.type !== "month") {
+    if (this.type !== 'month') {
       this._currentView = "month";
     }
   }

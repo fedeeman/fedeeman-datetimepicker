@@ -6,10 +6,10 @@
     "ng": "ng",
     "start": "ng serve",
     "start:prod": "ng serve --prod",
-    "build": "yarn build:lib && ng build",
-    "build:lib": "yarn build:lib/core && yarn build:lib/moment",
-    "build:lib/core": "rimraf dist/core && ng build core && copy-files-from-to projects/core/copy-files.json",
-    "build:lib/moment": "rimraf dist/moment && ng build moment && copy-files-from-to projects/moment/copy-files.json",
+    "build": "npm run build:lib && ng build",
+    "build:lib": "npm run build:lib/core && npm run build:lib/moment",
+    "build:lib/core": "rimraf dist/core && ng build core --configuration production && copy-files-from-to projects/core/copy-files.json",
+    "build:lib/moment": "rimraf dist/moment && ng build moment --configuration production && copy-files-from-to projects/moment/copy-files.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -34,11 +34,11 @@
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.6.8",
-    "@angular-devkit/build-ng-packagr": "~0.6.8",
-    "@angular/cli": "~6.0.8",
-    "@angular/compiler-cli": "^6.0.7",
-    "@angular/language-service": "^6.0.7",
+    "@angular-devkit/build-angular": "~0.8.4",
+    "@angular-devkit/build-ng-packagr": "~0.8.4",
+    "@angular/cli": "~6.2.4",
+    "@angular/compiler-cli": "^6.1.9",
+    "@angular/language-service": "^6.0.1",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
@@ -51,13 +51,13 @@
     "karma-coverage-istanbul-reporter": "~2.0.0",
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "ng-packagr": "3.0.3",
+    "ng-packagr": "3.0.6",
     "protractor": "~5.3.0",
     "rimraf": "2.6.2",
     "ts-node": "~5.0.1",
     "tsickle": ">=0.25.5",
     "tslib": "^1.7.1",
     "tslint": "~5.9.1",
-    "typescript": "~2.7.2"
+    "typescript": "~2.9.1"
   }
 }

@@ -1,7 +1,6 @@
 export * from "./datetimepicker.module";
 export * from "./calendar";
 export * from "./calendar-body";
-export * from "./datetimepicker";
 export * from "./datetimepicker-filtertype";
 export * from "./datetimepicker-input";
 export * from "./datetimepicker-toggle";
