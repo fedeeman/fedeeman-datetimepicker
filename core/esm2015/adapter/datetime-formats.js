@@ -1,0 +1,18 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+import { InjectionToken } from "@angular/core";
+/**
+ * @record
+ */
+export function MatDatetimeFormats() { }
+if (false) {
+    /** @type {?} */
+    MatDatetimeFormats.prototype.parse;
+    /** @type {?} */
+    MatDatetimeFormats.prototype.display;
+}
+/** @type {?} */
+export const MAT_DATETIME_FORMATS = new InjectionToken("mat-datetime-formats");
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGF0ZXRpbWUtZm9ybWF0cy5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BtYXQtZGF0ZXRpbWVwaWNrZXIvY29yZS8iLCJzb3VyY2VzIjpbImFkYXB0ZXIvZGF0ZXRpbWUtZm9ybWF0cy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLGNBQWMsRUFBRSxNQUFNLGVBQWUsQ0FBQzs7OztBQUUvQyx3Q0FpQkM7OztJQWhCQyxtQ0FLRTs7SUFDRixxQ0FTRTs7O0FBR0osTUFBTSxPQUFPLG9CQUFvQixHQUFHLElBQUksY0FBYyxDQUFxQixzQkFBc0IsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEluamVjdGlvblRva2VuIH0gZnJvbSBcIkBhbmd1bGFyL2NvcmVcIjtcclxuXHJcbmV4cG9ydCBpbnRlcmZhY2UgTWF0RGF0ZXRpbWVGb3JtYXRzIHtcclxuICBwYXJzZToge1xyXG4gICAgZGF0ZUlucHV0PzogYW55O1xyXG4gICAgbW9udGhJbnB1dD86IGFueTtcclxuICAgIHRpbWVJbnB1dD86IGFueTtcclxuICAgIGRhdGV0aW1lSW5wdXQ/OiBhbnk7XHJcbiAgfTtcclxuICBkaXNwbGF5OiB7XHJcbiAgICBkYXRlSW5wdXQ6IGFueTtcclxuICAgIG1vbnRoSW5wdXQ6IGFueTtcclxuICAgIHRpbWVJbnB1dDogYW55O1xyXG4gICAgZGF0ZXRpbWVJbnB1dDogYW55O1xyXG4gICAgbW9udGhZZWFyTGFiZWw6IGFueTtcclxuICAgIGRhdGVBMTF5TGFiZWw6IGFueTtcclxuICAgIG1vbnRoWWVhckExMXlMYWJlbDogYW55O1xyXG4gICAgcG9wdXBIZWFkZXJEYXRlTGFiZWw6IGFueTtcclxuICB9O1xyXG59XHJcblxyXG5leHBvcnQgY29uc3QgTUFUX0RBVEVUSU1FX0ZPUk1BVFMgPSBuZXcgSW5qZWN0aW9uVG9rZW48TWF0RGF0ZXRpbWVGb3JtYXRzPihcIm1hdC1kYXRldGltZS1mb3JtYXRzXCIpO1xyXG4iXX0=

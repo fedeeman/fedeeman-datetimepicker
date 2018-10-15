@@ -1,0 +1,25 @@
+{
+  "name": "@mat-datetimepicker/core",
+  "version": "1.0.0",
+  "repository": "https://github.com/fedeeman/mat-datetimepicker.git",
+  "author": "<j.fedor38@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/core": "^6.0.7",
+    "@angular/material": "^6.3.3",
+    "@angular/cdk": "^6.3.3"
+  },
+  "main": "bundles/mat-datetimepicker-core.umd.js",
+  "module": "fesm5/mat-datetimepicker-core.js",
+  "es2015": "fesm2015/mat-datetimepicker-core.js",
+  "esm5": "esm5/mat-datetimepicker-core.js",
+  "esm2015": "esm2015/mat-datetimepicker-core.js",
+  "fesm5": "fesm5/mat-datetimepicker-core.js",
+  "fesm2015": "fesm2015/mat-datetimepicker-core.js",
+  "typings": "mat-datetimepicker-core.d.ts",
+  "metadata": "mat-datetimepicker-core.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
