@@ -45,7 +45,7 @@
   <mat-datetimepicker-month-view *ngSwitchCase="'month'"
                   [activeDate]="_activeDate"
                   [type]="type"
-                  [selected]="selected"
+                  [selected]="_activeDate"
                   [dateFilter]="_dateFilterForViews"
                   (selectedChange)="_dateSelected($event)"
                   (_userSelection)="_userSelected()">
@@ -53,7 +53,7 @@
   <mat-datetimepicker-year-view *ngSwitchCase="'year'"
                  [activeDate]="_activeDate"
                  [type]="type"
-                 [selected]="selected"
+                 [selected]="_activeDate"
                  [dateFilter]="_dateFilterForViews"
                  (selectedChange)="_monthSelected($event)"
                  (_userSelection)="_userSelected()">
@@ -69,4 +69,8 @@
              (selectedChange)="_timeSelected($event)"
              (_userSelection)="_userSelected()">
   </mat-datetimepicker-clock>
+  <div class="mat-datetimepicker-calendar-footer">
+    <button mat-button color="primary" (click)="_handleCancelButton($event)">{{ cancelButtonLabel }}</button>
+    <button mat-raised-button color="primary" (click)="_handleConfirmButton($event)">{{ confirmButtonLabel }}</button>
+  </div>
 </div>
