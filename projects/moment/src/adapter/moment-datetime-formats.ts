@@ -1,4 +1,4 @@
-import { MatDatetimeFormats } from "@mat-datetimepicker/core";
+import { MatDatetimeFormats } from "fedeeman-datetimepicker/core";
 
 export const MAT_MOMENT_DATETIME_FORMATS: MatDatetimeFormats = {
   parse: {
