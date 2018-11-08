@@ -2,13 +2,14 @@
   <div *ngIf="type !== 'time'"
        class="mat-datetimepicker-calendar-header-year"
        [class.active]="_currentView == 'year'"
-       (click)="_yearClicked()">{{ _yearLabel }}</div>
+       (click)="_yearClicked()">{{ _yearLabel }}
+  </div>
   <div class="mat-datetimepicker-calendar-header-date-time">
     <span *ngIf="type !== 'time'"
           class="mat-datetimepicker-calendar-header-date"
           [class.active]="_currentView == 'month'"
           [class.not-clickable]="type === 'month'"
-          (click)="_dateClicked()">{{ _dateLabel }}</span>
+          (click)="_dateClicked()" style="font-size: 0.7em;">{{ _dateLabel }}</span>
     <span *ngIf="type.endsWith('time')"
           class="mat-datetimepicker-calendar-header-time"
           [class.active]="_currentView == 'clock'">
@@ -30,7 +31,8 @@
           <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
         </svg>
       </div>
-      <div class="mat-datetimepicker-calendar-period-button" [@slideCalendar]="_calendarState" (@slideCalendar.done)="_calendarStateDone()">
+      <div class="mat-datetimepicker-calendar-period-button" [@slideCalendar]="_calendarState"
+           (@slideCalendar.done)="_calendarStateDone()">
         <strong>{{ _monthYearLabel }}</strong>
       </div>
       <div class="mat-datetimepicker-calendar-next-button"
@@ -43,31 +45,31 @@
     </div>
   </div>
   <mat-datetimepicker-month-view *ngSwitchCase="'month'"
-                  [activeDate]="_activeDate"
-                  [type]="type"
-                  [selected]="_activeDate"
-                  [dateFilter]="_dateFilterForViews"
-                  (selectedChange)="_dateSelected($event)"
-                  (_userSelection)="_userSelected()">
+                                 [activeDate]="_activeDate"
+                                 [type]="type"
+                                 [selected]="_activeDate"
+                                 [dateFilter]="_dateFilterForViews"
+                                 (selectedChange)="_dateSelected($event)"
+                                 (_userSelection)="_userSelected()">
   </mat-datetimepicker-month-view>
   <mat-datetimepicker-year-view *ngSwitchCase="'year'"
-                 [activeDate]="_activeDate"
-                 [type]="type"
-                 [selected]="_activeDate"
-                 [dateFilter]="_dateFilterForViews"
-                 (selectedChange)="_monthSelected($event)"
-                 (_userSelection)="_userSelected()">
+                                [activeDate]="_activeDate"
+                                [type]="type"
+                                [selected]="_activeDate"
+                                [dateFilter]="_dateFilterForViews"
+                                (selectedChange)="_monthSelected($event)"
+                                (_userSelection)="_userSelected()">
   </mat-datetimepicker-year-view>
   <mat-datetimepicker-clock *ngSwitchDefault
-             [startView]="_clockView"
-             [interval]="timeInterval"
-             [minDate]="minDate"
-             [maxDate]="maxDate"
-             [dateFilter]="dateFilter"
-             [selected]="_activeDate"
-             (activeDateChange)="_onActiveDateChange($event)"
-             (selectedChange)="_timeSelected($event)"
-             (_userSelection)="_userSelected()">
+                            [startView]="_clockView"
+                            [interval]="timeInterval"
+                            [minDate]="minDate"
+                            [maxDate]="maxDate"
+                            [dateFilter]="dateFilter"
+                            [selected]="_activeDate"
+                            (activeDateChange)="_onActiveDateChange($event)"
+                            (selectedChange)="_timeSelected($event)"
+                            (_userSelection)="_userSelected()">
   </mat-datetimepicker-clock>
   <div class="mat-datetimepicker-calendar-footer">
     <button mat-button color="primary" (click)="_handleCancelButton($event)">{{ cancelButtonLabel }}</button>

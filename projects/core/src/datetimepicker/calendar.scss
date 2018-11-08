@@ -41,7 +41,7 @@ $mat-calendar-next-icon-transform: translateX(-2px) rotate(45deg);
 
 .mat-datetimepicker-calendar-header-date-time {
   font-size: 30px;
-  line-height: 34px;
+  line-height: 30px;
 
   [mode='landscape'] & {
     white-space: normal;
@@ -64,6 +64,7 @@ $mat-calendar-next-icon-transform: translateX(-2px) rotate(45deg);
 
 .mat-datetimepicker-calendar-header-time {
   padding-left: 8px;
+  padding-top: 5px;
 
   &:not(.active) {
     opacity: 0.6;
