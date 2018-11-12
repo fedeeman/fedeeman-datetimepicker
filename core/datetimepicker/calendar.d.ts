@@ -13,6 +13,7 @@ export declare class MatDatetimepickerCalendar<D> implements AfterContentInit, O
     private _ngZone;
     private _adapter;
     private _dateFormats;
+    private changeDetectorRef;
     private _intlChanges;
     _userSelection: EventEmitter<void>;
     type: "date" | "time" | "month" | "datetime";
