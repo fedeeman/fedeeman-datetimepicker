@@ -146,6 +146,7 @@ export class MatDatetimepickerCalendar<D> implements AfterContentInit, OnDestroy
       } else {
         this.calendarState("left");
       }
+      this.changeDetectorRef.detectChanges();
     }
   }
 
@@ -192,7 +193,7 @@ export class MatDatetimepickerCalendar<D> implements AfterContentInit, OnDestroy
               private _ngZone: NgZone,
               @Optional() private _adapter: DatetimeAdapter<D>,
               @Optional() @Inject(MAT_DATETIME_FORMATS) private _dateFormats: MatDatetimeFormats,
-              changeDetectorRef: ChangeDetectorRef) {
+              private changeDetectorRef: ChangeDetectorRef) {
     if (!this._adapter) {
       throw createMissingDateImplError("DatetimeAdapter");
     }
