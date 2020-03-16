@@ -1,5 +1,5 @@
 import { AfterContentInit, ChangeDetectorRef, ElementRef, EventEmitter, NgZone, OnDestroy } from "@angular/core";
-import { MatDatepickerIntl } from "@angular/material";
+import { MatDatepickerIntl } from "@angular/material/datepicker";
 import { DatetimeAdapter } from "../adapter/datetime-adapter";
 import { MatDatetimeFormats } from "../adapter/datetime-formats";
 import { MatDatetimepickerFilterType } from "./datetimepicker-filtertype";
@@ -18,18 +18,22 @@ export declare class MatDatetimepickerCalendar<D> implements AfterContentInit, O
     _userSelection: EventEmitter<void>;
     type: "date" | "time" | "month" | "datetime";
     /** A date representing the period (month or year) to start the calendar in. */
-    startAt: D | null;
+    get startAt(): D | null;
+    set startAt(value: D | null);
     private _startAt;
     /** Whether the calendar should be started in month or year view. */
     startView: "clock" | "month" | "year";
     /** The currently selected date. */
-    selected: D | null;
+    get selected(): D | null;
+    set selected(value: D | null);
     private _selected;
     /** The minimum selectable date. */
-    minDate: D | null;
+    get minDate(): D | null;
+    set minDate(value: D | null);
     private _minDate;
     /** The maximum selectable date. */
-    maxDate: D | null;
+    get maxDate(): D | null;
+    set maxDate(value: D | null);
     private _maxDate;
     timeInterval: number;
     /** A function used to filter which dates are selectable. */
@@ -42,18 +46,19 @@ export declare class MatDatetimepickerCalendar<D> implements AfterContentInit, O
      * The current active date. This determines which time period is shown and which date is
      * highlighted when using keyboard navigation.
      */
-    _activeDate: D;
+    get _activeDate(): D;
+    set _activeDate(value: D);
     private _clampedActiveDate;
     _userSelected(): void;
     /** Whether the calendar is in month view. */
     _currentView: "clock" | "month" | "year";
     _clockView: "hour" | "minute";
     /** The label for the current calendar view. */
-    readonly _yearLabel: string;
-    readonly _monthYearLabel: string;
-    readonly _dateLabel: string;
-    readonly _hoursLabel: string;
-    readonly _minutesLabel: string;
+    get _yearLabel(): string;
+    get _monthYearLabel(): string;
+    get _dateLabel(): string;
+    get _hoursLabel(): string;
+    get _minutesLabel(): string;
     _calendarState: string;
     constructor(_elementRef: ElementRef, _intl: MatDatepickerIntl, _ngZone: NgZone, _adapter: DatetimeAdapter<D>, _dateFormats: MatDatetimeFormats, changeDetectorRef: ChangeDetectorRef);
     ngAfterContentInit(): void;

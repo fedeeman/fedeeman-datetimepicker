@@ -1,4 +1,4 @@
-import { DateAdapter } from "@angular/material";
+import { DateAdapter } from "@angular/material/core";
 import { DatetimeAdapter } from "./datetime-adapter";
 export declare class NativeDatetimeAdapter extends DatetimeAdapter<Date> {
     constructor(matDateLocale: string, _delegate: DateAdapter<Date>);

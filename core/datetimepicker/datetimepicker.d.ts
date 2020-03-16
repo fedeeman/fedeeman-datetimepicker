@@ -34,25 +34,30 @@ export declare class MatDatetimepicker<D> implements OnDestroy {
     private _dir;
     private _document;
     /** The date to open the calendar to initially. */
-    startAt: D | null;
+    get startAt(): D | null;
+    set startAt(date: D | null);
     private _startAt;
     /** The view that the calendar should start in. */
     startView: "clock" | "month" | "year";
     mode: "auto" | "portrait" | "landscape";
     timeInterval: number;
-    openOnFocus: boolean;
+    get openOnFocus(): boolean;
+    set openOnFocus(value: boolean);
     private _openOnFocus;
     _handleFocus(): void;
-    type: "date" | "time" | "month" | "datetime";
+    get type(): "date" | "time" | "month" | "datetime";
+    set type(value: "date" | "time" | "month" | "datetime");
     private _type;
     /**
      * Whether the calendar UI is in touch mode. In touch mode the calendar opens in a dialog rather
      * than a popup and elements have more padding to allow for bigger touch targets.
      */
-    touchUi: boolean;
+    get touchUi(): boolean;
+    set touchUi(value: boolean);
     private _touchUi;
     /** Whether the datepicker pop-up should be disabled. */
-    disabled: boolean;
+    get disabled(): boolean;
+    set disabled(value: boolean);
     private _disabled;
     /**
      * Emits new selected date when selected date changes.
@@ -72,13 +77,14 @@ export declare class MatDatetimepicker<D> implements OnDestroy {
     /** The id for the datepicker calendar. */
     id: string;
     /** The currently selected date. */
-    _selected: D | null;
+    get _selected(): D | null;
+    set _selected(value: D | null);
     private _validSelected;
     /** The minimum selectable date. */
-    readonly _minDate: D | null;
+    get _minDate(): D | null;
     /** The maximum selectable date. */
-    readonly _maxDate: D | null;
-    readonly _dateFilter: (date: D | null, type: MatDatetimepickerFilterType) => boolean;
+    get _maxDate(): D | null;
+    get _dateFilter(): (date: D | null, type: MatDatetimepickerFilterType) => boolean;
     /** A reference to the overlay when the calendar is opened as a popup. */
     private _popupRef;
     /** A reference to the dialog when the calendar is opened as a dialog. */

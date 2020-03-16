@@ -17,20 +17,24 @@ export declare class MatDatetimepickerClock<D> implements AfterContentInit {
     /**
      * The date to display in this clock view.
      */
-    activeDate: D;
+    get activeDate(): D;
+    set activeDate(value: D);
     private _activeDate;
     /** The currently selected date. */
-    selected: D | null;
+    get selected(): D | null;
+    set selected(value: D | null);
     private _selected;
     /** The minimum selectable date. */
-    minDate: D | null;
+    get minDate(): D | null;
+    set minDate(value: D | null);
     private _minDate;
     private _timeChanged;
     /** The maximum selectable date. */
-    maxDate: D | null;
+    get maxDate(): D | null;
+    set maxDate(value: D | null);
     private _maxDate;
     /** Whether the clock should be started in hour or minute view. */
-    startView: ClockView;
+    set startView(value: ClockView);
     /** A function used to filter which dates are selectable. */
     dateFilter: (date: D, type: MatDatetimepickerFilterType) => boolean;
     interval: number;
@@ -45,7 +49,7 @@ export declare class MatDatetimepickerClock<D> implements AfterContentInit {
     _hourView: boolean;
     _selectedHour: number;
     _selectedMinute: number;
-    readonly _hand: any;
+    get _hand(): any;
     private mouseMoveListener;
     private mouseUpListener;
     constructor(_element: ElementRef, _adapter: DatetimeAdapter<D>);

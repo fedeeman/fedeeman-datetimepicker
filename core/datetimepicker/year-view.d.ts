@@ -12,10 +12,12 @@ export declare class MatDatetimepickerYearView<D> implements AfterContentInit {
     _userSelection: EventEmitter<void>;
     type: "date" | "time" | "month" | "datetime";
     /** The date to display in this year view (everything other than the year is ignored). */
-    activeDate: D;
+    get activeDate(): D;
+    set activeDate(value: D);
     private _activeDate;
     /** The currently selected date. */
-    selected: D;
+    get selected(): D;
+    set selected(value: D);
     private _selected;
     /** A function used to filter which dates are selectable. */
     dateFilter: (date: D) => boolean;

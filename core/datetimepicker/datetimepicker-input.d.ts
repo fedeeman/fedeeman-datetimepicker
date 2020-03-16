@@ -26,24 +26,28 @@ export declare class MatDatetimepickerInput<D> implements AfterContentInit, Cont
     private _dateFormats;
     private _formField;
     /** The datepicker that this input is associated with. */
-    matDatetimepicker: MatDatetimepicker<D>;
+    set matDatetimepicker(value: MatDatetimepicker<D>);
     _datepicker: MatDatetimepicker<D>;
     private registerDatepicker;
-    matDatepickerFilter: (date: D | null, type: MatDatetimepickerFilterType) => boolean;
+    set matDatepickerFilter(filter: (date: D | null, type: MatDatetimepickerFilterType) => boolean);
     _dateFilter: (date: D | null, type: MatDatetimepickerFilterType) => boolean;
     /** The value of the input. */
-    value: D | null;
+    get value(): D | null;
+    set value(value: D | null);
     private getDisplayFormat;
     private getParseFormat;
     private _value;
     /** The minimum valid date. */
-    min: D | null;
+    get min(): D | null;
+    set min(value: D | null);
     private _min;
     /** The maximum valid date. */
-    max: D | null;
+    get max(): D | null;
+    set max(value: D | null);
     private _max;
     /** Whether the datepicker-input is disabled. */
-    disabled: any;
+    get disabled(): any;
+    set disabled(value: any);
     private _disabled;
     /** Emits when a `change` event is fired on this `<input>`. */
     dateChange: EventEmitter<MatDatetimepickerInputEvent<D>>;

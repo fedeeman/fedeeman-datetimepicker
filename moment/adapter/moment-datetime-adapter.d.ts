@@ -1,4 +1,4 @@
-import { DateAdapter } from "@angular/material";
+import { DateAdapter } from "@angular/material/core";
 import { DatetimeAdapter } from "fedeeman-datetimepicker/core";
 import { Moment } from "moment";
 export declare class MomentDatetimeAdapter extends DatetimeAdapter<Moment> {

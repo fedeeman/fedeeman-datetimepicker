@@ -35,6 +35,6 @@ export declare class MatDatetimepickerCalendarBody {
     selectedValueChange: EventEmitter<number>;
     _cellClicked(cell: MatDatetimepickerCalendarCell): void;
     /** The number of blank cells to put at the beginning for the first row. */
-    readonly _firstRowOffset: number;
+    get _firstRowOffset(): number;
     _isActiveCell(rowIndex: number, colIndex: number): boolean;
 }

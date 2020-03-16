@@ -14,10 +14,12 @@ export declare class MatDatetimepickerMonthView<D> implements AfterContentInit {
     /**
      * The date to display in this month view (everything other than the month and year is ignored).
      */
-    activeDate: D;
+    get activeDate(): D;
+    set activeDate(value: D);
     private _activeDate;
     /** The currently selected date. */
-    selected: D;
+    get selected(): D;
+    set selected(value: D);
     private _selected;
     /** A function used to filter which dates are selectable. */
     dateFilter: (date: D) => boolean;

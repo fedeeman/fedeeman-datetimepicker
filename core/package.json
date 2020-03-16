@@ -1,13 +1,14 @@
 {
   "name": "fedeeman-datetimepicker/core",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "repository": "https://github.com/fedeeman/fedeeman-datetimepicker.git",
   "author": "JF <j.fedor38@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/core": "^6.0.7",
-    "@angular/material": "^6.3.3",
-    "@angular/cdk": "^6.3.3"
+    "@angular/core": "^9.0.0",
+    "@angular/material": "^9.0.0",
+    "@angular/cdk": "^9.0.0",
+    "tslib": "^1.10.0"
   },
   "main": "bundles/fedeeman-datetimepicker-core.umd.js",
   "module": "fesm5/fedeeman-datetimepicker-core.js",
@@ -18,8 +19,5 @@
   "fesm2015": "fesm2015/fedeeman-datetimepicker-core.js",
   "typings": "fedeeman-datetimepicker-core.d.ts",
   "metadata": "fedeeman-datetimepicker-core.metadata.json",
-  "sideEffects": false,
-  "dependencies": {
-    "tslib": "^1.9.0"
-  }
+  "sideEffects": false
 }
