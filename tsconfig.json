@@ -2,13 +2,14 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "module": "esnext",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
+    "target": "es2015",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -17,16 +18,16 @@
       "dom"
     ],
     "paths": {
-      "@mat-datetimepicker/core": [
+      "fedeeman-datetimepicker/core": [
         "dist/core"
       ],
-      "@mat-datetimepicker/core/*": [
+      "fedeeman-datetimepicker/core/*": [
         "dist/core/*"
       ],
-      "@mat-datetimepicker/moment": [
+      "fedeeman-datetimepicker/moment": [
         "dist/moment"
       ],
-      "@mat-datetimepicker/moment/*": [
+      "fedeeman-datetimepicker/moment/*": [
         "dist/moment/*"
       ]
     }

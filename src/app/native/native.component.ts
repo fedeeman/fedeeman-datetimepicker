@@ -7,14 +7,14 @@ import {
 import {
   DateAdapter,
   NativeDateAdapter
-} from "@angular/material";
+} from "@angular/material/core";
 import {
   DatetimeAdapter,
   MAT_DATETIME_FORMATS,
   MAT_NATIVE_DATETIME_FORMATS,
   MatDatetimepickerFilterType,
   NativeDatetimeAdapter
-} from "@mat-datetimepicker/core";
+} from "fedeeman-datetimepicker/core";
 
 @Component({
   selector: "app-native-datetime",
